@@ -13,11 +13,11 @@
 header div nav .collapse {
   height: 80px;
 }
-header button {
+header .top-btn {
   outline: none;
   border: none;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 8px 25px;
   color: black;
 
@@ -26,4 +26,36 @@ hr {
   padding: 0;
   margin: 0;
 }
-
+.top-btn span {
+  background-color: white;
+  color: #0A1E25;
+  display: block;
+  position: relative;  
+}
+.top-btn span span {
+  display: none;
+  background-color: white;
+  color: #0A1E25;
+  position: absolute;
+  top: 0px;
+  left: -100px;
+  overflow: hidden;
+}
+.top-btn:hover {
+  overflow-x: hidden;
+}
+.top-btn:hover span {
+  animation: mymove 3s infinite;
+}
+.top-btn:hover span span {
+  animation: mymove-2 3s infinite;
+}
+.top-btn:hover span span {
+  display: block;
+}
+@keyframes mymove {
+  50% {transform: translate(145px);}
+}
+@keyframes mymove-2 {
+  50% {transform: translate(2px);}
+}
