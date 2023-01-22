@@ -1,3 +1,4 @@
+/* addin Lato & Solitero font */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Solitreo&display=swap');
 *{
@@ -11,7 +12,7 @@
   font-size: 14px;
 }
 header div nav .collapse {
-  height: 80px;
+  height: 70px;
 }
 header .top-btn {
   outline: none;
@@ -20,12 +21,13 @@ header .top-btn {
   border-radius: 20px;
   padding: 8px 25px;
   color: black;
-
 }
+/* horizontal line under header */
 hr {
   padding: 0;
   margin: 0;
 }
+/* for button hovering effect */
 .top-btn span {
   background-color: white;
   color: #0A1E25;
@@ -38,24 +40,28 @@ hr {
   color: #0A1E25;
   position: absolute;
   top: 0px;
-  left: -100px;
+  left: -130px;
   overflow: hidden;
+  transition:transform 1s;
 }
 .top-btn:hover {
   overflow-x: hidden;
+  transition:transform 1s;
 }
 .top-btn:hover span {
-  animation: mymove 3s infinite;
+  transform: translateX(135px);
+  transition:transform 1s;
 }
 .top-btn:hover span span {
-  animation: mymove-2 3s infinite;
+  transform: translateX(2px);
+  transition:transform 1s;
 }
 .top-btn:hover span span {
   display: block;
 }
-@keyframes mymove {
-  50% {transform: translate(145px);}
+.row-1 h2,
+.row-2 h2,
+.row-3 h2 {
+  font-size: 10rem;
 }
-@keyframes mymove-2 {
-  50% {transform: translate(2px);}
-}
+
