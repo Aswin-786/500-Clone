@@ -103,6 +103,8 @@ hr {
   text-indent: 6.25vw;
   line-height: 1.8rem;;
 }
+
+/* logos slider */
 .block-2  img {
   width: 140px;
   height: 90px;
@@ -111,7 +113,7 @@ hr {
 .scrolling {
   position: relative;
   width: 100vw;
-  height: 150px;
+  height: 15px;
   overflow: hidden;
 }
 .scrolling img {
@@ -119,7 +121,6 @@ hr {
   position: absolute;
   top: 0;
   right: 0;
-  margin-left: 30px;
 }
 @keyframes MoveLeftRight {
   0%, 100% {
