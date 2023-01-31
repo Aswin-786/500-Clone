@@ -1,3 +1,5 @@
+
+// scroolin effects
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry)
@@ -9,8 +11,24 @@ const observer = new IntersectionObserver((entries) => {
   })
 })
 
-const hiddenElements = document.querySelectorAll('.hidden')
+const hiddenElements = document.querySelectorAll('.hidde')
 hiddenElements.forEach((el) => observer.observe(el))
+
+// scrolling effects for fourth image and moving logos
+const observ = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry)
+    if(entry.isIntersecting) {
+      entry.target.classList.add ('show')
+    } else {
+      entry.target.classList.remove('show')
+    }
+  })
+})
+
+const hidden = document.querySelectorAll('.hidx')
+hidden.forEach((els) => observ.observe(els))
+
 
 
 // slide show
