@@ -26,6 +26,7 @@ header .top-btn {
   padding: 8px 25px;
   color: black;
 }
+
 /* horizontal line under header */
 hr {
   padding: 0;
@@ -124,16 +125,26 @@ hr {
   
 }
 
-.hidden {
+/* upsdie down scrolling effects for contents */
+.hidde {
  opacity: 0;
- filter: blur(5px);
- transform: translateX(-100%);
- transition: all 2s;
+ filter: blur(50px);
+ /* transform: translateX(-100%); */
+ transition: all 800ms;
 }
+
+.hidx {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(-100%);
+  transition: all 2s;
+}
+
 .show {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
+  transform: translateY(0);
 }
 
 
