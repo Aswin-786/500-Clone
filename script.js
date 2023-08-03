@@ -1,37 +1,38 @@
-
-// scroolin effects
+// Scrolling effects for hidden elements
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry)
-    if(entry.isIntersecting) {
-      entry.target.classList.add ('show')
+  for (const entry of entries) {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
     } else {
-      entry.target.classList.remove('show')
+      entry.target.classList.remove('show');
     }
-  })
-})
+  }
+});
 
-const hiddenElements = document.querySelectorAll('.hidde')
-hiddenElements.forEach((el) => observer.observe(el))
+const hiddenElements = document.querySelectorAll('.hidde');
+for (const el of hiddenElements) {
+  observer.observe(el);
+}
 
-// scrolling effects for fourth image and moving logos
+// Scrolling effects for fourth image and moving logos
 const observ = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry)
-    if(entry.isIntersecting) {
-      entry.target.classList.add ('show')
+  for (const entry of entries) {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
     } else {
-      entry.target.classList.remove('show')
+      entry.target.classList.remove('show');
     }
-  })
-})
+  }
+});
 
-const hidden = document.querySelectorAll('.hidx')
-hidden.forEach((els) => observ.observe(els))
+const hidden = document.querySelectorAll('.hidx');
+for (const els of hidden) {
+  observ.observe(els);
+}
 
-
-
-// slide show
+// Slide show
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -44,17 +45,24 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+  const slides = document.getElementsByClassName("mySlides");
+  const dots = document.getElementsByClassName("dot");
+  
+  if (n > slides.length) {
+    slideIndex = 1;
+  }    
+  if (n < 1) {
+    slideIndex = slides.length;
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+  
+  for (const slide of slides) {
+    slide.style.display = "none";  
   }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  
+  for (const dot of dots) {
+    dot.classList.remove("active");
+  }
+  
+  slides[slideIndex - 1].style.display = "block";  
+  dots[slideIndex - 1].classList.add("active");
 }
